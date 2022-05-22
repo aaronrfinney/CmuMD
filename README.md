@@ -61,11 +61,24 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	
 	__Keywords__:  
 	* `GROUP`  =  the group of atoms of the specie that controlled  
-	* `NSV`    =  number of atoms per solvent molecule   
-	* `DCR`    =  distance of the CR inner boundary from the left and right interfaces of the crystal slab (all lengths are in units of Z box size!!!). 
-	* `CRSIZE` =  width of the CR.  
-	* `WF`     =  Fermi function length at the CR boundaries. 
-	* `ASYMM`  =  Indicates that this statement defines the concentration on the left side of the membrane slab, `ASYMM=-1` indicates the left side of the membrane slab, `ASYMM=1` indicates the right side of the membrane slab.  
+	* `NSV`    =  (compulsory) number of atoms per solvent molecule
+	* `SOLUTE` =  number of atoms per solute molecule
+	* `DCR`    =  (compulsory) distance of the CR inner boundary from the left and right interfaces of the crystal slab (all lengths are in units of Z box size!!!). 
+	* `CRSIZE`  =  (compulsory) width of the CR.  
+	* `WF`      =  (compulsory) Fermi function length at the CR boundaries. 
+	* `COF`     =  Cutoff for the Fermi function
+	* `WIN`     =  Fermi function truncation distance inside the CR
+	* `COIN`    =  Cutoff for the Fermi function inside the CR
+	* `WOUT`    =  Fermi function truncation distance outside the CR
+	* `COOUT`   =  Cutoff for the Fermi function outside the CR
+	* `FIXED`   =  Fix the position of the interface
+	* `NZ`      =  Number of histogram bins for the density in z
+	* `NINT`    =  Density at the phase boundary (effective boundary condition)
+	* `COMST`   =  Solute centre of mass
+	* `COMSV`   =  Solvent centre of mass
+	* `DELTA`   =  Difference in density in two different CR regions when using the asymmetric variant
+	* `NOSCALE` =  Use absolute length units
+ 	* `ASYMM`   =  Indicates that this statement defines the concentration on the left side of the membrane slab, `ASYMM=-1` indicates the left side of the membrane slab, `ASYMM=1` indicates the right side of the membrane slab.  
 	
 3. `RESTRAINT ARG=LEFT AT=1.03  KAPPA=8000.0 LABEL=lres`
 `RESTRAINT ARG=RIGHT AT=0.0   KAPPA=500000.0 LABEL=rres`  
