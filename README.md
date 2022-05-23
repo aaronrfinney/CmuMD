@@ -60,7 +60,7 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	These line computes the methane number density in a CR located at distance DCR from the left and right sides of the membrane slab. 
 	
 	__Keywords__:  
-	* `GROUP`  =  the group of atoms of the specie that controlled  
+	* `GROUP`  =  the group of atoms for which the density will be controlled
 	* `NSV`    =  (compulsory) number of atoms per solvent molecule
 	* `SOLUTE` =  number of atoms per solute molecule
 	* `DCR`    =  (compulsory) distance of the CR inner boundary from the left and right interfaces of the crystal slab (all lengths are in units of Z box size!!!). 
@@ -74,8 +74,8 @@ PRINT ARG=LEFT,RIGHT STRIDE=500 FILE=COLVAR_2
 	* `FIXED`   =  Fix the position of the interface
 	* `NZ`      =  Number of histogram bins for the density in z
 	* `NINT`    =  Density at the phase boundary (effective boundary condition)
-	* `COMST`   =  Use solute centre of mass for the density calculation
-	* `COMSV`   =  Use solvent centre of mass for the density calculation
+	* `COMST`   =  Use solute centre of mass in the density calculation
+	* `COMSV`   =  Use solvent centre of mass in the density calculation
 	* `DELTA`   =  Difference in density in two different CR regions when using the asymmetric variant
 	* `NOSCALE` =  Use absolute length units
  	* `ASYMM`   =  Indicates that this statement defines the concentration on the left side of the membrane slab, `ASYMM=-1` indicates the left side of the membrane slab, `ASYMM=1` indicates the right side of the membrane slab.  
